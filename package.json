@@ -32,6 +32,10 @@
     "@liqui/liquid-ui": "^0.1.0",
     "vue": ">=2.6.0 <3"
   },
+  "devDependencies": {
+    "@liqui/liquid-ui": "file:../liquid-ui",
+    "vue": "2.7.16"
+  },
   "engines": {
     "node": ">=18"
   }

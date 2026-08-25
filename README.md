@@ -6,7 +6,7 @@ translate the emitted `navigate` and `logout` events through an adapter.
 
 ```js
 import Vue from 'vue'
-import { createLiquidUI } from '@liqui/liquid-ui'
+import { createLiquidUI } from '@liqui/liquid-ui/vue2'
 import { createLiquidAppShell } from '@liqui/liquid-app-shell'
 import '@liqui/liquid-ui/styles.css'
 import '@liqui/liquid-app-shell/styles.css'

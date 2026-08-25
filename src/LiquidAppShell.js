@@ -1,4 +1,4 @@
-import { LiquidGlassSurface } from '@liqui/liquid-ui'
+import { LiquidGlassSurface } from '@liqui/liquid-ui/vue2'
 import { normalizeShellModel } from './contracts.js'
 import { LiquidMobileNav } from './LiquidMobileNav.js'
 import { LiquidSideNav } from './LiquidSideNav.js'
