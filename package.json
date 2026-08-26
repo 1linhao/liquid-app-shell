@@ -21,7 +21,8 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "styles.css"
   ],
   "scripts": {
     "build": "node scripts/build.mjs",
@@ -34,9 +35,15 @@
   },
   "devDependencies": {
     "@liqui/liquid-ui": "file:../liquid-ui",
+    "esbuild": "^0.28.2",
     "vue": "2.7.16"
   },
   "engines": {
     "node": ">=18"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

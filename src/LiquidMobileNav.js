@@ -1,7 +1,9 @@
 import { flattenNavigation } from './contracts.js'
+import { LiquidNavIcon } from '@liqui/liquid-ui'
 
 export const LiquidMobileNav = {
   name: 'LiquidMobileNav',
+  components: { LiquidNavIcon },
   props: { model: { type: Object, required: true } },
   computed: {
     items() {
@@ -24,7 +26,7 @@ export const LiquidMobileNav = {
       attrs: { type: 'button', disabled: item.disabled, 'aria-current': item.key === this.model.activeKey ? 'page' : null },
       on: { click: () => this.navigate(item) }
     }, [
-      item.icon ? h('span', { class: 'liquid-shell__mobile-icon', attrs: { 'data-icon': item.icon, 'aria-hidden': 'true' } }) : null,
+      item.icon ? h(LiquidNavIcon, { props: { name: item.icon, size: 18 }, attrs: { 'aria-hidden': 'true' } }) : null,
       h('span', item.mobileLabel)
     ])))
   }

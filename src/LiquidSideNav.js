@@ -1,5 +1,8 @@
+import { LiquidNavIcon } from '@liqui/liquid-ui'
+
 export const LiquidSideNav = {
   name: 'LiquidSideNav',
+  components: { LiquidNavIcon },
   props: { model: { type: Object, required: true } },
   methods: {
     navigate(item) {
@@ -26,7 +29,7 @@ export const LiquidSideNav = {
             on: { click: () => this.navigate(item) }
           }, [
             this.$scopedSlots['navigation-item']?.({ item, active: item.key === this.model.activeKey }) ?? [
-              item.icon ? h('span', { class: 'liquid-shell__nav-icon', attrs: { 'data-icon': item.icon, 'aria-hidden': 'true' } }) : null,
+              item.icon ? h(LiquidNavIcon, { props: { name: item.icon }, attrs: { 'aria-hidden': 'true' } }) : null,
               h('span', item.label)
             ]
           ]))

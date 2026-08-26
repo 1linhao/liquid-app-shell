@@ -1,4 +1,4 @@
-import { LiquidGlassSurface } from '@liqui/liquid-ui/vue2'
+import { LiquidGlassSurface } from '@liqui/liquid-ui'
 import { normalizeShellModel } from './contracts.js'
 import { LiquidMobileNav } from './LiquidMobileNav.js'
 import { LiquidSideNav } from './LiquidSideNav.js'
@@ -20,7 +20,7 @@ export const LiquidAppShell = {
       'navigation-item': this.$scopedSlots['navigation-item']
     }
     return h('div', { class: 'liquid-shell', attrs: { 'aria-busy': String(model.busy) } }, [
-      h(LiquidGlassSurface, { class: 'liquid-shell__side-surface', props: { surface: 'navigation', elevated: true } }, [
+      h(LiquidGlassSurface, { class: 'liquid-shell__side-surface', props: { surface: 'navigation', material: 'frost', elevated: true } }, [
         h(LiquidSideNav, { props: { model }, scopedSlots: forwardSlots, on: { navigate: (key) => this.$emit('navigate', key) } })
       ]),
       h('main', { class: 'liquid-shell__main' }, [
@@ -36,7 +36,7 @@ export const LiquidAppShell = {
         ]),
         h('section', { class: 'liquid-shell__content' }, this.$slots.default)
       ]),
-      h(LiquidGlassSurface, { class: 'liquid-shell__mobile-surface', props: { surface: 'navigation', elevated: true } }, [
+      h(LiquidGlassSurface, { class: 'liquid-shell__mobile-surface', props: { surface: 'navigation', material: 'frost', elevated: true } }, [
         this.$scopedSlots['mobile-navigation']?.({ model }) ?? h(LiquidMobileNav, {
           props: { model }, on: { navigate: (key) => this.$emit('navigate', key) }
         })
