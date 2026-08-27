@@ -2,7 +2,12 @@
   "name": "@liqui/liquid-app-shell",
   "version": "0.1.0",
   "description": "A model-driven responsive application shell for LiquidUI.",
+  "keywords": ["app-shell", "responsive-layout", "vue2", "liquid-glass", "navigation"],
   "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/1linhao/liquid-app-shell.git" },
+  "homepage": "https://github.com/1linhao/liquid-app-shell#readme",
+  "bugs": { "url": "https://github.com/1linhao/liquid-app-shell/issues" },
+  "publishConfig": { "access": "public", "provenance": true },
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -21,10 +26,12 @@
   "files": [
     "dist",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE",
     "styles.css"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "build": "node scripts/build.mjs",
     "test": "node --test",
     "check": "npm run test && npm run build"
@@ -40,10 +47,5 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   }
 }
