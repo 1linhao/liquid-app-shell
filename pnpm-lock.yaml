@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@liqui/liquid-ui':
-        specifier: file:../liquid-ui
-        version: file:../liquid-ui(vue@2.7.16)
+        specifier: github:1linhao/liquid-ui#main
+        version: https://codeload.github.com/1linhao/liquid-ui/tar.gz/af021255dec2c62a292464e9049e2555d482c93b(vue@2.7.16)
       esbuild:
         specifier: ^0.28.2
         version: 0.28.2
@@ -193,8 +193,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@liqui/liquid-ui@file:../liquid-ui':
-    resolution: {directory: ../liquid-ui, type: directory}
+  '@liqui/liquid-ui@https://codeload.github.com/1linhao/liquid-ui/tar.gz/af021255dec2c62a292464e9049e2555d482c93b':
+    resolution: {gitHosted: true, integrity: sha512-kijZS3GGaVq07eiM7rJDjViuDrf6KEADTwKoG4uO1eEn09BL3wCcZbJtAXBjzzSGhYw/pqHibzT75gBfth3czw==, tarball: https://codeload.github.com/1linhao/liquid-ui/tar.gz/af021255dec2c62a292464e9049e2555d482c93b}
+    version: 0.1.0
     engines: {node: '>=18'}
     peerDependencies:
       vue: '>=2.6.0 <3'
@@ -335,7 +336,7 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@liqui/liquid-ui@file:../liquid-ui(vue@2.7.16)':
+  '@liqui/liquid-ui@https://codeload.github.com/1linhao/liquid-ui/tar.gz/af021255dec2c62a292464e9049e2555d482c93b(vue@2.7.16)':
     optionalDependencies:
       vue: 2.7.16
 
