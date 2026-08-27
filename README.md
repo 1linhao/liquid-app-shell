@@ -1,20 +1,24 @@
 # LiquidAppShell
 
+[![CI](https://github.com/1linhao/liquid-app-shell/actions/workflows/ci.yml/badge.svg)](https://github.com/1linhao/liquid-app-shell/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 LiquidAppShell 是可跨 Vue 2 网页项目复用的响应式应用框架：桌面端提供侧边导航和顶部栏，移动端切换为分段式底部导航。它只消费一个纯数据模型并发出用户意图，不读取 Router、Vuex、权限、Cookie、Token 或业务接口。
+
+项目总览与仓库选型见 [Liquid 公共入口](https://github.com/1linhao/liquid)。
 
 Shell 与控件材质相互独立：本仓库只负责应用骨架、导航和响应式布局；按钮、表单、表格、浮层及材质运行时由 [LiquidUI](https://github.com/1linhao/liquid-ui) 提供。项目可以只使用 LiquidUI，也可以组合两者。
 
 ## 安装
 
 ```sh
-pnpm add @liqui/liquid-ui @liqui/liquid-app-shell vue@2
+pnpm add \
+  @liqui/liquid-ui@github:1linhao/liquid-ui \
+  @liqui/liquid-app-shell@github:1linhao/liquid-app-shell \
+  vue@2.7.16
 ```
 
-在 npm 包正式发布前，也可以从 GitHub 安装两个仓库。
-
-```sh
-pnpm add github:1linhao/liquid-ui github:1linhao/liquid-app-shell
-```
+安装后使用稳定包名 `@liqui/liquid-ui` 与 `@liqui/liquid-app-shell`，无需从仓库路径导入文件。
 
 ```js
 import Vue from 'vue'
@@ -118,6 +122,6 @@ pnpm check
 npm pack --dry-run
 ```
 
-契约测试会阻止 Shell 导入路由、状态仓库、授权模块、API 或 Cookie。完整组合、三类视口和键盘交互由 [liquid-integration-lab](https://github.com/1linhao/liquid-integration-lab) 验收，并已在 Trojan Panel 真实项目中完成管理员与普通用户角色验证。
+契约测试会阻止 Shell 导入路由、状态仓库、授权模块、API 或 Cookie。完整组合、三类视口和键盘交互由 [liquid-integration-lab](https://github.com/1linhao/liquid-integration-lab) 持续验收。
 
 版本变化见 [CHANGELOG.md](CHANGELOG.md)，参与开发见 [CONTRIBUTING.md](CONTRIBUTING.md)，安全问题见 [SECURITY.md](SECURITY.md)。项目采用 MIT 许可证。
