@@ -7,6 +7,14 @@ LiquidAppShell 是可跨 Vue 2 网页项目复用的响应式应用框架：桌�
 
 项目总览与仓库选型见 [Liquid 公共入口](https://github.com/1linhao/liquid)。
 
+## 效果预览
+
+[![LiquidAppShell 桌面布局效果](https://raw.githubusercontent.com/1linhao/liquid-integration-lab/main/tests/visual/material-matrix.spec.js-snapshots/light-blue-desktop-linux.png)](https://1linhao.github.io/liquid-integration-lab/?mode=light&palette=blue)
+
+[打开响应式在线演示](https://1linhao.github.io/liquid-integration-lab/?mode=light&palette=blue) · [查看暗色主题](https://1linhao.github.io/liquid-integration-lab/?mode=dark&palette=violet)
+
+在线演示使用真实 LiquidAppShell 和模型契约构建。缩窄浏览器窗口即可看到桌面侧栏切换为移动端底部导航；点击导航项、主题按钮和退出入口可以观察 Shell 向宿主发送事件，而不直接控制路由或账户状态。
+
 Shell 与控件材质相互独立：本仓库只负责应用骨架、导航和响应式布局；按钮、表单、表格、浮层及材质运行时由 [LiquidUI](https://github.com/1linhao/liquid-ui) 提供。项目可以只使用 LiquidUI，也可以组合两者。
 
 ## 安装

@@ -5,7 +5,7 @@
   "keywords": ["app-shell", "responsive-layout", "vue2", "liquid-glass", "navigation"],
   "license": "MIT",
   "repository": { "type": "git", "url": "git+https://github.com/1linhao/liquid-app-shell.git" },
-  "homepage": "https://github.com/1linhao/liquid-app-shell#readme",
+  "homepage": "https://1linhao.github.io/liquid-integration-lab/",
   "bugs": { "url": "https://github.com/1linhao/liquid-app-shell/issues" },
   "publishConfig": { "access": "public", "provenance": true },
   "type": "module",
