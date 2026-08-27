@@ -25,5 +25,7 @@ jobs:
         working-directory: liquid-app-shell
       - run: pnpm check
         working-directory: liquid-app-shell
+      - run: git diff --exit-code -- dist
+        working-directory: liquid-app-shell
       - run: npm pack --dry-run
         working-directory: liquid-app-shell
